@@ -1,0 +1,22 @@
+{% load static %}
+<head>
+<link rel="stylesheet" href="{% static 'css/wordcount.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+        <h1>WORD COUNT</h1>
+        <p>긴 글, 짧은 글 상관 없이 단어 개수를 세어보자!</p>
+        </div>
+        <br>
+        <a href="{% url 'about' %}">ABOUT</a>
+        <br><br>
+
+        <form action="{% url 'count' %}">
+            <textarea cols="80" rows="20" name="fulltext"></textarea>
+            <br><br>
+            <input type="submit" value="과연 몇 개?" />
+        </form>
+    </div>
+</body>
